@@ -1,0 +1,1647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210210 11:53:29.999" rpa="false">
+<suite id="s1" name="TestCases" source="C:\Users\Computador\Desktop\Venturus\test-automation-develop\automacao\TestCases">
+<suite id="s1-s1" name="feature Login" source="C:\Users\Computador\Desktop\Venturus\test-automation-develop\automacao\TestCases\feature_Login.robot">
+<test id="s1-s1-t1" name="Scenario: Nao logar na aplicacao">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:30.166" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:53:30.165" endtime="20210210 11:53:33.092"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:53:33.092" endtime="20210210 11:53:33.208"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:30.165" endtime="20210210 11:53:33.208"></status>
+</kw>
+<kw name="Given Acesso o ambiente" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginAccount}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:33.210" endtime="20210210 11:53:33.231"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkTestAutomation}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:33.231" endtime="20210210 11:53:33.249"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:33.210" endtime="20210210 11:53:33.249"></status>
+</kw>
+<kw name="When Realizo preenchimento dos campos" library="step_Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldsLogin}</arg>
+<arg>${loginIncorreto}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:33.250" level="INFO">Typing text 'testuser1' into text field 'normal_login_username'.</msg>
+<status status="PASS" starttime="20210210 11:53:33.249" endtime="20210210 11:53:33.381"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldsSenha}</arg>
+<arg>${senha}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:33.381" level="INFO">Typing password into text field 'normal_login_password'.</msg>
+<msg timestamp="20210210 11:53:33.413" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210210 11:53:33.728" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210210 11:53:33.381" endtime="20210210 11:53:33.728"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginIn}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:33.728" endtime="20210210 11:53:33.744"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${checkLoginIn}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:33.745" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20210210 11:53:33.745" endtime="20210210 11:53:33.799"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:33.249" endtime="20210210 11:53:33.799"></status>
+</kw>
+<kw name="Then login não realizado" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginIncorreto}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:33.800" endtime="20210210 11:53:34.038"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:33.799" endtime="20210210 11:53:34.039"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:53:34.039" endtime="20210210 11:53:37.159"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:34.039" endtime="20210210 11:53:37.159"></status>
+</kw>
+<tags>
+<tag>naoLogarNaAplicacao</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:53:30.165" endtime="20210210 11:53:37.160" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Scenario: Não preenchimento do campo senha">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:37.162" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:53:37.162" endtime="20210210 11:53:40.185"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:53:40.185" endtime="20210210 11:53:40.303"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:37.161" endtime="20210210 11:53:40.303"></status>
+</kw>
+<kw name="Given Acesso o ambiente" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginAccount}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:40.306" endtime="20210210 11:53:40.327"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkTestAutomation}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:40.327" endtime="20210210 11:53:40.345"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:40.306" endtime="20210210 11:53:40.345"></status>
+</kw>
+<kw name="When Realizo preenchimento do campo login" library="step_Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldsLogin}</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:40.346" level="INFO">Typing text 'testuser' into text field 'normal_login_username'.</msg>
+<status status="PASS" starttime="20210210 11:53:40.346" endtime="20210210 11:53:40.460"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginIn}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:40.460" endtime="20210210 11:53:40.511"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${checkLoginIn}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:40.512" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20210210 11:53:40.511" endtime="20210210 11:53:40.799"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:40.345" endtime="20210210 11:53:40.799"></status>
+</kw>
+<kw name="Then tento realizar o login sem senha" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPrencimentoSenha}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:40.800" endtime="20210210 11:53:40.818"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:40.799" endtime="20210210 11:53:40.819"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:53:40.820" endtime="20210210 11:53:42.917"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:40.819" endtime="20210210 11:53:42.918"></status>
+</kw>
+<tags>
+<tag>naoPreencheCampoSenha</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:53:37.161" endtime="20210210 11:53:42.919" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Scenario: Logar na aplicacao">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:42.934" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:53:42.933" endtime="20210210 11:53:47.903"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:53:47.903" endtime="20210210 11:53:48.032"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:42.932" endtime="20210210 11:53:48.032"></status>
+</kw>
+<kw name="Given Acesso o ambiente" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginAccount}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:48.033" endtime="20210210 11:53:48.053"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkTestAutomation}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:48.053" endtime="20210210 11:53:48.072"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:48.033" endtime="20210210 11:53:48.072"></status>
+</kw>
+<kw name="When Realizo o login na aplicacao" library="step_Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldsLogin}</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:48.073" level="INFO">Typing text 'testuser' into text field 'normal_login_username'.</msg>
+<status status="PASS" starttime="20210210 11:53:48.073" endtime="20210210 11:53:48.189"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldsSenha}</arg>
+<arg>${senha}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:48.190" level="INFO">Typing password into text field 'normal_login_password'.</msg>
+<msg timestamp="20210210 11:53:48.484" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210210 11:53:48.541" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210210 11:53:48.190" endtime="20210210 11:53:48.541"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginIn}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:48.541" endtime="20210210 11:53:48.558"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${checkLoginIn}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:48.558" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20210210 11:53:48.558" endtime="20210210 11:53:48.612"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:48.073" endtime="20210210 11:53:48.612"></status>
+</kw>
+<kw name="Then login realizado com sucesso" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkHi}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:48.613" endtime="20210210 11:53:48.864"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkBemVindo}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:48.865" endtime="20210210 11:53:48.880"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:48.613" endtime="20210210 11:53:48.881"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:53:48.882" endtime="20210210 11:53:50.976"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:48.881" endtime="20210210 11:53:50.976"></status>
+</kw>
+<tags>
+<tag>logarAplicacao</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:53:42.930" endtime="20210210 11:53:50.977" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210210 11:53:30.018" endtime="20210210 11:53:50.991"></status>
+</suite>
+<suite id="s1-s2" name="feature Page1" source="C:\Users\Computador\Desktop\Venturus\test-automation-develop\automacao\TestCases\feature_Page1.robot">
+<test id="s1-s2-t1" name="Scenario: Organizar tabela em forma crescente">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:51.016" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:53:51.016" endtime="20210210 11:53:53.984"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:53:53.985" endtime="20210210 11:53:54.097"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:51.015" endtime="20210210 11:53:54.097"></status>
+</kw>
+<kw name="Given acesso a pagina 1" library="step_Page1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage1}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:54.099" endtime="20210210 11:53:54.116"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage1}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:54.116" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[1]/span'.</msg>
+<status status="PASS" starttime="20210210 11:53:54.116" endtime="20210210 11:53:54.172"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:54.098" endtime="20210210 11:53:54.172"></status>
+</kw>
+<kw name="When vejo uma tabela" library="step_Page1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkName}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:54.173" endtime="20210210 11:53:54.210"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:54.173" endtime="20210210 11:53:54.210"></status>
+</kw>
+<kw name="Then organizo de forma crescente" library="step_Page1">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnOrdenar}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:54.211" level="INFO">Double clicking element 'class=ant-table-column-sorters'.</msg>
+<status status="PASS" starttime="20210210 11:53:54.211" endtime="20210210 11:53:54.598"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkOrdByron}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:54.598" endtime="20210210 11:53:54.614"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPagina2}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:54.614" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[2]/div/div/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20210210 11:53:54.614" endtime="20210210 11:53:54.650"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${CheckOrdWillard}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:53:54.651" endtime="20210210 11:53:54.666"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:54.211" endtime="20210210 11:53:54.666"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:53:54.667" endtime="20210210 11:53:57.635"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:54.667" endtime="20210210 11:53:57.636"></status>
+</kw>
+<tags>
+<tag>OrgTableCresc</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:53:51.015" endtime="20210210 11:53:57.638" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Scenario: Organizar tabela em forma Descrente">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:53:57.649" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:53:57.648" endtime="20210210 11:54:00.631"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:54:00.631" endtime="20210210 11:54:00.745"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:53:57.648" endtime="20210210 11:54:00.745"></status>
+</kw>
+<kw name="Given acesso a pagina 1" library="step_Page1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage1}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:00.747" endtime="20210210 11:54:00.762"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage1}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:00.762" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[1]/span'.</msg>
+<status status="PASS" starttime="20210210 11:54:00.762" endtime="20210210 11:54:00.818"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:00.746" endtime="20210210 11:54:00.818"></status>
+</kw>
+<kw name="When vejo uma tabela" library="step_Page1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkName}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:00.819" endtime="20210210 11:54:00.855"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:00.818" endtime="20210210 11:54:00.855"></status>
+</kw>
+<kw name="Then organizo de forma Descrente" library="step_Page1">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnOrdenar}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:00.856" level="INFO">Clicking element 'class=ant-table-column-sorters'.</msg>
+<status status="PASS" starttime="20210210 11:54:00.856" endtime="20210210 11:54:00.915"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${CheckOrdWillard}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:00.915" endtime="20210210 11:54:00.933"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPagina2}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:00.934" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[2]/div/div/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20210210 11:54:00.933" endtime="20210210 11:54:00.978"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkOrdByron}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:00.978" endtime="20210210 11:54:00.996"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:00.856" endtime="20210210 11:54:00.996"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:54:00.997" endtime="20210210 11:54:04.091"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:00.997" endtime="20210210 11:54:04.092"></status>
+</kw>
+<tags>
+<tag>OrgTableDesc</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:53:57.647" endtime="20210210 11:54:04.093" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Scenario: Desativo ordenacao">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:04.103" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:54:04.103" endtime="20210210 11:54:07.078"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:54:07.079" endtime="20210210 11:54:07.195"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:04.103" endtime="20210210 11:54:07.195"></status>
+</kw>
+<kw name="Given acesso a pagina 1" library="step_Page1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage1}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:07.196" endtime="20210210 11:54:07.212"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage1}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:07.212" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[1]/span'.</msg>
+<status status="PASS" starttime="20210210 11:54:07.212" endtime="20210210 11:54:07.267"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:07.195" endtime="20210210 11:54:07.267"></status>
+</kw>
+<kw name="When vejo uma tabela" library="step_Page1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkName}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:07.268" endtime="20210210 11:54:07.305"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:07.268" endtime="20210210 11:54:07.305"></status>
+</kw>
+<kw name="Then desativo a ordenacao" library="step_Page1">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnOrdenar}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:07.306" level="INFO">Double clicking element 'class=ant-table-column-sorters'.</msg>
+<status status="PASS" starttime="20210210 11:54:07.306" endtime="20210210 11:54:07.694"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkOrdByron}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:07.694" endtime="20210210 11:54:07.711"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnOrdenar}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:07.711" level="INFO">Clicking element 'class=ant-table-column-sorters'.</msg>
+<status status="PASS" starttime="20210210 11:54:07.711" endtime="20210210 11:54:07.754"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkOrdJonh}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:07.754" endtime="20210210 11:54:07.770"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPagina2}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:07.770" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[2]/div/div/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20210210 11:54:07.770" endtime="20210210 11:54:07.815"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkOrdMila}</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:07.816" endtime="20210210 11:54:07.832"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:07.306" endtime="20210210 11:54:07.832"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:54:07.833" endtime="20210210 11:54:09.938"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:07.833" endtime="20210210 11:54:09.939"></status>
+</kw>
+<tags>
+<tag>DesativoOrd</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:54:04.102" endtime="20210210 11:54:09.940" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210210 11:53:51.003" endtime="20210210 11:54:09.950"></status>
+</suite>
+<suite id="s1-s3" name="feature Page2" source="C:\Users\Computador\Desktop\Venturus\test-automation-develop\automacao\TestCases\feature_Page2.robot">
+<test id="s1-s3-t1" name="Scenario: Preenche o formulario">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:09.963" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:54:09.963" endtime="20210210 11:54:14.925"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:54:14.925" endtime="20210210 11:54:15.039"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:09.963" endtime="20210210 11:54:15.039"></status>
+</kw>
+<kw name="Given acesso a pagina 2" library="step_Page2">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage2}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:15.040" endtime="20210210 11:54:15.056"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage2}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.057" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[2]/span'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.056" endtime="20210210 11:54:15.148"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkTitlePag2}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:15.148" endtime="20210210 11:54:15.164"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:15.040" endtime="20210210 11:54:15.164"></status>
+</kw>
+<kw name="When Preencho formulario horizontal" library="step_Page2">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldsInput}</arg>
+<arg>${PrencherInputCorreto}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.165" level="INFO">Typing text 'Teste Automatizado 2021' into text field '//*[@id="root"]/div/main/div/form/div[2]/div[2]/div/span/span/input'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.165" endtime="20210210 11:54:15.296"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldSelect}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.296" level="INFO">Clicking element '//*[@id="root"]/div/main/div/form/div[3]/div[2]/div/span/div'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.296" endtime="20210210 11:54:15.368"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPais}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:15.368" endtime="20210210 11:54:15.385"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>none</arg>
+<arg>ARROW_DOWN</arg>
+<arg>${checkPais}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.385" level="INFO">Sending key(s) ('ARROW_DOWN', 'Canada') to page.</msg>
+<msg timestamp="20210210 11:54:15.385" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20210210 11:54:15.385" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<msg timestamp="20210210 11:54:15.394" level="INFO">Sending keys Canada</msg>
+<status status="PASS" starttime="20210210 11:54:15.385" endtime="20210210 11:54:15.466"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>none</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.467" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210210 11:54:15.467" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210210 11:54:15.467" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210210 11:54:15.466" endtime="20210210 11:54:15.480"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTreeSelect}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.480" level="INFO">Clicking element '//*[@id="root"]/div/main/div/form/div[4]/div[2]/div/span/span'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.480" endtime="20210210 11:54:15.529"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCor}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.529" level="INFO">Clicking element 'css=i.anticon.anticon-caret-down.ant-select-switcher-icon &gt; svg &gt; path'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.529" endtime="20210210 11:54:15.570"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldGreen}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.570" level="INFO">Clicking element '//*[contains(text(),'Green')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.570" endtime="20210210 11:54:15.612"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkGreen}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:15.612" endtime="20210210 11:54:15.629"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCidade}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.629" level="INFO">Clicking element '//*[@id="root"]/div/main/div/form/div[5]/div[2]/div/span/span/input'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.629" endtime="20210210 11:54:15.676"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkSaoPaulo}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:15.676" endtime="20210210 11:54:15.694"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldSaoPaulo}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.695" level="INFO">Clicking element '//*[contains(text(),'São Paulo')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.695" endtime="20210210 11:54:15.739"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCampinas}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.739" level="INFO">Clicking element '//*[contains(text(),'Campinas')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.739" endtime="20210210 11:54:15.775"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkCapCidade}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:15.776" endtime="20210210 11:54:15.793"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCalendario}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.793" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[6]/div[2]/div/span/span/div/input'.</msg>
+<status status="PASS" starttime="20210210 11:54:15.793" endtime="20210210 11:54:15.894"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldPreencherCalendario}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.895" level="INFO">Typing text '2021-02-24' into text field 'class=ant-calendar-input '.</msg>
+<status status="PASS" starttime="20210210 11:54:15.894" endtime="20210210 11:54:15.990"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>none</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20210210 11:54:15.990" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210210 11:54:15.990" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210210 11:54:15.991" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210210 11:54:15.990" endtime="20210210 11:54:16.007"></status>
+</kw>
+<kw name="Drag And Drop By Offset" library="SeleniumLibrary">
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>${btnSlider}</arg>
+<arg>350</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:16.007" endtime="20210210 11:54:16.587"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkSlider}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:16.587" endtime="20210210 11:54:16.602"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btnSwitch}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:16.602" level="INFO">Clicking button 'class=ant-switch'.</msg>
+<status status="PASS" starttime="20210210 11:54:16.602" endtime="20210210 11:54:16.674"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTextArea}</arg>
+<arg>${PreencherComentario}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:16.675" level="INFO">Typing text 'Teste Automatizado Venturus 2021' into text field '//*[@id="root"]/div/main/div/form/div[9]/div[2]/div/span/textarea'.</msg>
+<status status="PASS" starttime="20210210 11:54:16.675" endtime="20210210 11:54:16.765"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnVertical}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:16.766" level="INFO">Clicking element '//*[contains(text(),'Vertical')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:16.766" endtime="20210210 11:54:16.828"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnInline}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:16.829" level="INFO">Clicking element '//*[contains(text(),'In line')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:16.828" endtime="20210210 11:54:16.893"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnHorizontal}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:16.893" level="INFO">Clicking element '//*[contains(text(),'Horizontal')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:16.893" endtime="20210210 11:54:16.963"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:15.165" endtime="20210210 11:54:16.963"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:54:16.964" endtime="20210210 11:54:19.058"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:16.964" endtime="20210210 11:54:19.059"></status>
+</kw>
+<tags>
+<tag>PreencheFormsHorizontal</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:54:09.962" endtime="20210210 11:54:19.060" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="Scenario: Preenche o formulario">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:19.074" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:54:19.074" endtime="20210210 11:54:22.030"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:54:22.030" endtime="20210210 11:54:22.145"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:19.073" endtime="20210210 11:54:22.145"></status>
+</kw>
+<kw name="Given acesso a pagina 2" library="step_Page2">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage2}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:22.146" endtime="20210210 11:54:22.162"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage2}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.162" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[2]/span'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.162" endtime="20210210 11:54:22.255"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkTitlePag2}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:22.255" endtime="20210210 11:54:22.271"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:22.145" endtime="20210210 11:54:22.271"></status>
+</kw>
+<kw name="When Preencho formulario Vertical" library="step_Page2">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnVertical}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.272" level="INFO">Clicking element '//*[contains(text(),'Vertical')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.272" endtime="20210210 11:54:22.345"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldsInput}</arg>
+<arg>${PrencherInputIncorreto}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.346" level="INFO">Typing text '&amp;(*&amp;*&amp;' into text field '//*[@id="root"]/div/main/div/form/div[2]/div[2]/div/span/span/input'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.345" endtime="20210210 11:54:22.425"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldSelect}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.425" level="INFO">Clicking element '//*[@id="root"]/div/main/div/form/div[3]/div[2]/div/span/div'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.425" endtime="20210210 11:54:22.484"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPais}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:22.484" endtime="20210210 11:54:22.502"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>none</arg>
+<arg>ARROW_DOWN</arg>
+<arg>${checkPais}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.502" level="INFO">Sending key(s) ('ARROW_DOWN', 'Canada') to page.</msg>
+<msg timestamp="20210210 11:54:22.502" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20210210 11:54:22.503" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<msg timestamp="20210210 11:54:22.510" level="INFO">Sending keys Canada</msg>
+<status status="PASS" starttime="20210210 11:54:22.502" endtime="20210210 11:54:22.578"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>none</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.578" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210210 11:54:22.579" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210210 11:54:22.579" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210210 11:54:22.578" endtime="20210210 11:54:22.593"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTreeSelect}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.593" level="INFO">Clicking element '//*[@id="root"]/div/main/div/form/div[4]/div[2]/div/span/span'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.593" endtime="20210210 11:54:22.643"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCor}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.643" level="INFO">Clicking element 'css=i.anticon.anticon-caret-down.ant-select-switcher-icon &gt; svg &gt; path'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.643" endtime="20210210 11:54:22.681"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldBlue}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.681" level="INFO">Clicking element '//*[contains(text(),'Blue')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.681" endtime="20210210 11:54:22.721"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkGreen}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:22.721" endtime="20210210 11:54:22.736"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCidade}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.736" level="INFO">Clicking element '//*[@id="root"]/div/main/div/form/div[5]/div[2]/div/span/span/input'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.736" endtime="20210210 11:54:22.781"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkSaoPaulo}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:22.781" endtime="20210210 11:54:22.797"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldSaoPaulo}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.797" level="INFO">Clicking element '//*[contains(text(),'São Paulo')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.797" endtime="20210210 11:54:22.836"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCampinas}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.837" level="INFO">Clicking element '//*[contains(text(),'Campinas')]'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.837" endtime="20210210 11:54:22.877"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkCapCidade}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:22.877" endtime="20210210 11:54:22.893"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldCalendario}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.893" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[6]/div[2]/div/span/span/div/input'.</msg>
+<status status="PASS" starttime="20210210 11:54:22.893" endtime="20210210 11:54:22.989"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldPreencherCalendario}</arg>
+<arg>${DateVertical}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:22.990" level="INFO">Typing text '2021-07-24' into text field 'class=ant-calendar-input '.</msg>
+<status status="PASS" starttime="20210210 11:54:22.989" endtime="20210210 11:54:23.093"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>none</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20210210 11:54:23.094" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210210 11:54:23.094" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210210 11:54:23.094" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210210 11:54:23.094" endtime="20210210 11:54:23.109"></status>
+</kw>
+<kw name="Drag And Drop By Offset" library="SeleniumLibrary">
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>${btnSlider}</arg>
+<arg>500</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:23.109" endtime="20210210 11:54:23.702"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkSlider}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:23.702" endtime="20210210 11:54:23.716"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTextArea}</arg>
+<arg>${PreencherComentario}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:23.716" level="INFO">Typing text 'Teste Automatizado Venturus 2021' into text field '//*[@id="root"]/div/main/div/form/div[9]/div[2]/div/span/textarea'.</msg>
+<status status="PASS" starttime="20210210 11:54:23.716" endtime="20210210 11:54:23.811"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${PreencherComentario}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:54:23.811" endtime="20210210 11:54:23.828"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${checkTextArea}</arg>
+<arg>30</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210210 11:54:54.381" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210210 11:54:53.841" endtime="20210210 11:54:54.381"></status>
+</kw>
+<msg timestamp="20210210 11:54:54.383" level="FAIL">Text 'TextArea' did not disappear in 30 seconds.</msg>
+<status status="FAIL" starttime="20210210 11:54:23.828" endtime="20210210 11:54:54.383"></status>
+</kw>
+<status status="FAIL" starttime="20210210 11:54:22.271" endtime="20210210 11:54:54.383"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:54:54.384" endtime="20210210 11:54:56.506"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:54.384" endtime="20210210 11:54:56.507"></status>
+</kw>
+<tags>
+<tag>PreencheFormsVertical</tag>
+</tags>
+<status status="FAIL" starttime="20210210 11:54:19.073" endtime="20210210 11:54:56.508" critical="yes">Text 'TextArea' did not disappear in 30 seconds.</status>
+</test>
+<status status="FAIL" starttime="20210210 11:54:09.953" endtime="20210210 11:54:56.523"></status>
+</suite>
+<suite id="s1-s4" name="feature Page3" source="C:\Users\Computador\Desktop\Venturus\test-automation-develop\automacao\TestCases\feature_Page3.robot">
+<test id="s1-s4-t1" name="Scenario: Navego para Pagina Home">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:54:56.556" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:54:56.556" endtime="20210210 11:55:01.536"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:55:01.536" endtime="20210210 11:55:01.650"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:54:56.556" endtime="20210210 11:55:01.650"></status>
+</kw>
+<kw name="Given acesso a pagina 3" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:01.651" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]/span'.</msg>
+<status status="PASS" starttime="20210210 11:55:01.651" endtime="20210210 11:55:01.692"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:01.651" endtime="20210210 11:55:01.692"></status>
+</kw>
+<kw name="When acesso pagina home" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnHome}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:01.693" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[2]/span[1]/span[1]'.</msg>
+<status status="PASS" starttime="20210210 11:55:01.693" endtime="20210210 11:55:01.731"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkHi}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:55:01.731" endtime="20210210 11:55:01.747"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkBemVindo}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:55:01.748" endtime="20210210 11:55:01.762"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:01.692" endtime="20210210 11:55:01.763"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:55:01.764" endtime="20210210 11:55:03.855"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:01.763" endtime="20210210 11:55:03.856"></status>
+</kw>
+<tags>
+<tag>NavPagHome</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:54:56.555" endtime="20210210 11:55:03.858" critical="yes"></status>
+</test>
+<test id="s1-s4-t2" name="Scenario: Navego para Page 1">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:03.868" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:55:03.868" endtime="20210210 11:55:06.875"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:55:06.875" endtime="20210210 11:55:06.989"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:03.868" endtime="20210210 11:55:06.989"></status>
+</kw>
+<kw name="Given acesso a pagina 3" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:06.990" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]/span'.</msg>
+<status status="PASS" starttime="20210210 11:55:06.990" endtime="20210210 11:55:07.030"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:06.989" endtime="20210210 11:55:07.031"></status>
+</kw>
+<kw name="When acesso Page 1" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:07.031" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]/span'.</msg>
+<status status="PASS" starttime="20210210 11:55:07.031" endtime="20210210 11:55:07.065"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPage1}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:07.065" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[2]/span[2]/span[1]'.</msg>
+<status status="PASS" starttime="20210210 11:55:07.065" endtime="20210210 11:55:07.118"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkName}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:55:07.118" endtime="20210210 11:55:07.157"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:07.031" endtime="20210210 11:55:07.157"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:55:07.158" endtime="20210210 11:55:09.411"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:07.158" endtime="20210210 11:55:09.411"></status>
+</kw>
+<tags>
+<tag>NavPagUm</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:55:03.867" endtime="20210210 11:55:09.412" critical="yes"></status>
+</test>
+<test id="s1-s4-t3" name="Scenario: Navego para Page 2">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:09.417" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:55:09.417" endtime="20210210 11:55:12.429"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:55:12.429" endtime="20210210 11:55:12.543"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:09.416" endtime="20210210 11:55:12.543"></status>
+</kw>
+<kw name="Given acesso a pagina 3" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:12.544" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]/span'.</msg>
+<status status="PASS" starttime="20210210 11:55:12.544" endtime="20210210 11:55:12.584"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:12.543" endtime="20210210 11:55:12.585"></status>
+</kw>
+<kw name="When acesso Page 2" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:12.585" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]/span'.</msg>
+<status status="PASS" starttime="20210210 11:55:12.585" endtime="20210210 11:55:12.615"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPage2}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:12.616" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[2]/span[3]/span[1]'.</msg>
+<status status="PASS" starttime="20210210 11:55:12.616" endtime="20210210 11:55:12.661"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkTitlePag2}</arg>
+<arg>30</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210210 11:55:43.080" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210210 11:55:42.790" endtime="20210210 11:55:43.080"></status>
+</kw>
+<msg timestamp="20210210 11:55:43.080" level="FAIL">Text 'Form Items' did not appear in 30 seconds.</msg>
+<status status="FAIL" starttime="20210210 11:55:12.661" endtime="20210210 11:55:43.081"></status>
+</kw>
+<status status="FAIL" starttime="20210210 11:55:12.585" endtime="20210210 11:55:43.081"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:55:43.082" endtime="20210210 11:55:45.198"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:43.081" endtime="20210210 11:55:45.199"></status>
+</kw>
+<tags>
+<tag>NavPagDois</tag>
+</tags>
+<status status="FAIL" starttime="20210210 11:55:09.416" endtime="20210210 11:55:45.200" critical="yes">Text 'Form Items' did not appear in 30 seconds.</status>
+</test>
+<test id="s1-s4-t4" name="Scenario: Acesso Preferencias">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:45.211" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:55:45.211" endtime="20210210 11:55:48.132"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:55:48.132" endtime="20210210 11:55:48.245"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:45.211" endtime="20210210 11:55:48.245"></status>
+</kw>
+<kw name="Given Acesso o ambiente" library="step_Page3">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkHi}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:55:48.246" endtime="20210210 11:55:48.262"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkBemVindo}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:55:48.262" endtime="20210210 11:55:48.277"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:55:48.246" endtime="20210210 11:55:48.277"></status>
+</kw>
+<kw name="When No menu acesso preferencias" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnMenu}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:48.278" level="INFO">Clicking element 'xpath=//div[@id='root']/div/header/div[3]/button/div/span/span'.</msg>
+<status status="PASS" starttime="20210210 11:55:48.278" endtime="20210210 11:55:48.334"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPreferences}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:55:48.334" endtime="20210210 11:55:48.352"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPreferencias}</arg>
+</arguments>
+<msg timestamp="20210210 11:55:48.352" level="INFO">Clicking element '//*[contains(text(),'Preferences')]'.</msg>
+<status status="PASS" starttime="20210210 11:55:48.352" endtime="20210210 11:55:48.394"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${checkHi}</arg>
+<arg>30</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210210 11:56:19.136" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210210 11:56:18.572" endtime="20210210 11:56:19.136"></status>
+</kw>
+<msg timestamp="20210210 11:56:19.136" level="FAIL">Text 'Hi, Test User' did not disappear in 30 seconds.</msg>
+<status status="FAIL" starttime="20210210 11:55:48.394" endtime="20210210 11:56:19.136"></status>
+</kw>
+<status status="FAIL" starttime="20210210 11:55:48.278" endtime="20210210 11:56:19.137"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:56:19.137" endtime="20210210 11:56:21.244"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:56:19.137" endtime="20210210 11:56:21.245"></status>
+</kw>
+<tags>
+<tag>AcessarPreferencias</tag>
+</tags>
+<status status="FAIL" starttime="20210210 11:55:45.210" endtime="20210210 11:56:21.246" critical="yes">Text 'Hi, Test User' did not disappear in 30 seconds.</status>
+</test>
+<test id="s1-s4-t5" name="Scenario: Acesso Help">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:56:21.264" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:56:21.263" endtime="20210210 11:56:24.237"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:56:24.237" endtime="20210210 11:56:24.351"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:56:21.261" endtime="20210210 11:56:24.352"></status>
+</kw>
+<kw name="Given Acesso o ambiente" library="step_Page3">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkHi}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:56:24.352" endtime="20210210 11:56:24.369"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkBemVindo}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:56:24.370" endtime="20210210 11:56:24.384"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:56:24.352" endtime="20210210 11:56:24.384"></status>
+</kw>
+<kw name="When No menu acesso Help" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnMenu}</arg>
+</arguments>
+<msg timestamp="20210210 11:56:24.385" level="INFO">Clicking element 'xpath=//div[@id='root']/div/header/div[3]/button/div/span/span'.</msg>
+<status status="PASS" starttime="20210210 11:56:24.385" endtime="20210210 11:56:24.443"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkHelp}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:56:24.443" endtime="20210210 11:56:24.457"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnHelp}</arg>
+</arguments>
+<msg timestamp="20210210 11:56:24.457" level="INFO">Clicking element 'xpath=//li[2]'.</msg>
+<status status="PASS" starttime="20210210 11:56:24.457" endtime="20210210 11:56:24.498"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${checkHi}</arg>
+<arg>30</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210210 11:56:55.151" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210210 11:56:54.594" endtime="20210210 11:56:55.151"></status>
+</kw>
+<msg timestamp="20210210 11:56:55.152" level="FAIL">Text 'Hi, Test User' did not disappear in 30 seconds.</msg>
+<status status="FAIL" starttime="20210210 11:56:24.498" endtime="20210210 11:56:55.152"></status>
+</kw>
+<status status="FAIL" starttime="20210210 11:56:24.385" endtime="20210210 11:56:55.152"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:56:55.153" endtime="20210210 11:56:57.283"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:56:55.153" endtime="20210210 11:56:57.283"></status>
+</kw>
+<tags>
+<tag>AcessarHelp</tag>
+</tags>
+<status status="FAIL" starttime="20210210 11:56:21.259" endtime="20210210 11:56:57.283" critical="yes">Text 'Hi, Test User' did not disappear in 30 seconds.</status>
+</test>
+<test id="s1-s4-t6" name="Scenario: Logoff na aplicacao">
+<kw name="inicio o bronser" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAmbiente}</arg>
+<arg>${navChrome}</arg>
+</arguments>
+<msg timestamp="20210210 11:56:57.293" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20210210 11:56:57.293" endtime="20210210 11:57:00.361"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210210 11:57:00.361" endtime="20210210 11:57:00.475"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:56:57.293" endtime="20210210 11:57:00.475"></status>
+</kw>
+<kw name="Given Acesso o ambiente" library="step_Page3">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkHi}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:57:00.477" endtime="20210210 11:57:00.494"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkBemVindo}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:57:00.494" endtime="20210210 11:57:00.509"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:57:00.477" endtime="20210210 11:57:00.509"></status>
+</kw>
+<kw name="When Realizo o Logoff na aplicacao" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnMenu}</arg>
+</arguments>
+<msg timestamp="20210210 11:57:00.510" level="INFO">Clicking element 'xpath=//div[@id='root']/div/header/div[3]/button/div/span/span'.</msg>
+<status status="PASS" starttime="20210210 11:57:00.510" endtime="20210210 11:57:00.564"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLogoff}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:57:00.564" endtime="20210210 11:57:00.583"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnLogout}</arg>
+</arguments>
+<msg timestamp="20210210 11:57:00.584" level="INFO">Clicking element 'xpath=//li[3]'.</msg>
+<status status="PASS" starttime="20210210 11:57:00.584" endtime="20210210 11:57:00.630"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:57:00.509" endtime="20210210 11:57:00.630"></status>
+</kw>
+<kw name="Then Logoff realizado com sucesso" library="step_Page3">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkLoginAccount}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:57:00.631" endtime="20210210 11:57:00.683"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkTestAutomation}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20210210 11:57:00.683" endtime="20210210 11:57:00.700"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:57:00.631" endtime="20210210 11:57:00.700"></status>
+</kw>
+<kw name="finaliza o bronser" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210210 11:57:00.701" endtime="20210210 11:57:02.825"></status>
+</kw>
+<status status="PASS" starttime="20210210 11:57:00.701" endtime="20210210 11:57:02.825"></status>
+</kw>
+<tags>
+<tag>RealizoLogoff</tag>
+</tags>
+<status status="PASS" starttime="20210210 11:56:57.292" endtime="20210210 11:57:02.825" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20210210 11:54:56.538" endtime="20210210 11:57:02.827"></status>
+</suite>
+<status status="FAIL" starttime="20210210 11:53:30.000" endtime="20210210 11:57:02.838"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="4">Critical Tests</stat>
+<stat pass="10" fail="4">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">AcessarHelp</stat>
+<stat pass="0" fail="1">AcessarPreferencias</stat>
+<stat pass="1" fail="0">DesativoOrd</stat>
+<stat pass="1" fail="0">logarAplicacao</stat>
+<stat pass="1" fail="0">naoLogarNaAplicacao</stat>
+<stat pass="1" fail="0">naoPreencheCampoSenha</stat>
+<stat pass="0" fail="1">NavPagDois</stat>
+<stat pass="1" fail="0">NavPagHome</stat>
+<stat pass="1" fail="0">NavPagUm</stat>
+<stat pass="1" fail="0">OrgTableCresc</stat>
+<stat pass="1" fail="0">OrgTableDesc</stat>
+<stat pass="1" fail="0">PreencheFormsHorizontal</stat>
+<stat pass="0" fail="1">PreencheFormsVertical</stat>
+<stat pass="1" fail="0">RealizoLogoff</stat>
+</tag>
+<suite>
+<stat pass="10" fail="4" id="s1" name="TestCases">TestCases</stat>
+<stat pass="3" fail="0" id="s1-s1" name="feature Login">TestCases.feature Login</stat>
+<stat pass="3" fail="0" id="s1-s2" name="feature Page1">TestCases.feature Page1</stat>
+<stat pass="1" fail="1" id="s1-s3" name="feature Page2">TestCases.feature Page2</stat>
+<stat pass="3" fail="3" id="s1-s4" name="feature Page3">TestCases.feature Page3</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210210 11:54:19.069" level="WARN">Multiple test cases with name 'Scenario: Preenche o formulario' executed in test suite 'TestCases.feature Page2'.</msg>
+</errors>
+</robot>
